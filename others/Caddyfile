@@ -1,0 +1,3 @@
+truenas.f5.si {
+	reverse_proxy localhost:30043
+}
