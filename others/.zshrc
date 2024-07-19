@@ -400,7 +400,14 @@ if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
 fi
 
+#Atuin 
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
 
 bindkey '^r' atuin-search
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH=$VOLTA_HOME/bin:$PATH
+
+#React 
+export REACT_EDITOR=nvim
