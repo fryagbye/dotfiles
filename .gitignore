@@ -3,3 +3,5 @@ config/.config/karabiner/automatic_backups/*
 others/.tmux/plugins/tmuxifier
 others/.tmux/plugins/tmux/
 others/.tmux/plugins/tmuxifier
+**/**/.DS_Store
+others/karabiner/automatic_backups
