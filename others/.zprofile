@@ -8,3 +8,4 @@ elif [[ $ARCH == x86_64 ]]; then
 fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="$HOME/.local/share/mise/shims:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
