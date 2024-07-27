@@ -30,7 +30,7 @@ require("lazy").setup({
   },
   install = {
     colorscheme = {
-      "tokyonight",
+      "ayu-mirage",
       --"habamax",
       --"nightfox",
       --"dayfox",
