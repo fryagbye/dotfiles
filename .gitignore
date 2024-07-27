@@ -1,3 +1,5 @@
 config/.config/thefuck/__pycache__/*
 config/.config/karabiner/automatic_backups/*
 others/.tmux/plugins/tmuxifier
+others/.tmux/plugins/tmux/
+others/.tmux/plugins/tmuxifier
