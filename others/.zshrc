@@ -411,3 +411,7 @@ export PATH=$VOLTA_HOME/bin:$PATH
 
 #React 
 export REACT_EDITOR=nvim
+
+#lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
+
