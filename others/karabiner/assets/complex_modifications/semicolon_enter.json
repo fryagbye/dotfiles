@@ -1,0 +1,48 @@
+{
+    "description": "Semicolon to Enter",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "semicolon",
+                "modifiers": {
+                    "mandatory": [
+                        "control"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "return_or_enter",
+                    "modifiers": []
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [
+                        {
+                            "input_source_id": "com.apple.keylayout.ABC",
+                            "language": "en"
+                        }
+                    ],
+                    "type": "input_source_if"
+                }
+            ],
+            "from": {
+                "key_code": "semicolon"
+            },
+            "to": [
+                {
+                    "key_code": "semicolon",
+                    "modifiers": []
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

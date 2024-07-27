@@ -1,0 +1,25 @@
+{
+  "title": "switch_profile",
+  "rules": [
+    {
+      "description": "switch_to_default_profile",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_shift"
+          },
+          "to": [
+            {
+              "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'DP'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+
+    }
+
+  ]
+}
