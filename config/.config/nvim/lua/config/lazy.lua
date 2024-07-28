@@ -32,9 +32,9 @@ require("lazy").setup({
     colorscheme = {
       "ayu-mirage",
       --"habamax",
-      --"nightfox",
+      "nightfox",
       --"dayfox",
-      --"dawnfox",
+      -- "dawnfox",
       --"duskfox",
       --"nordfox",
       --"terafox",

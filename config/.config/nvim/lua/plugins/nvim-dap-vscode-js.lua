@@ -11,6 +11,6 @@ return {
   },
   lazy = true,
   config = function()
-    require("config.dap")
+    require("dap")
   end,
 }
