@@ -1,5 +1,8 @@
 return {
-  "lukas-reineke/indent-blankline.nvim",
+  "lukas-reineke/indent-blankline.nvim", -- Indent guides
   main = "ibl",
-  opts = {},
+  event = "VimEnter",
+  config = function()
+    require("ibl")
+  end,
 }
