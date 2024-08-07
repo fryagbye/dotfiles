@@ -907,7 +907,7 @@
         },
         "rules": [
           {
-            "description": "left_option twice toggle to get into vim-like hjkl arrows in specified apps",
+            "description": "left_control twice toggle to get into vim-like hjkl arrows in specified apps",
             "manipulators": [
               {
                 "conditions": [
@@ -917,7 +917,7 @@
                     "value": 1
                   },
                   {
-                    "name": "left_option pressed",
+                    "name": "left_control pressed",
                     "type": "variable_if",
                     "value": 1
                   },
@@ -928,13 +928,14 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
-                  "key_code": "left_option"
+                  "key_code": "left_control"
                 },
                 "to": [
                   {
@@ -954,7 +955,7 @@
                     "value": 1
                   },
                   {
-                    "name": "left_option pressed",
+                    "name": "left_control pressed",
                     "type": "variable_if",
                     "value": 1
                   },
@@ -965,13 +966,14 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
-                  "key_code": "left_option"
+                  "key_code": "left_control"
                 },
                 "to": [
                   {
@@ -992,13 +994,14 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
-                  "key_code": "left_option",
+                  "key_code": "left_control",
                   "modifiers": {
                     "optional": ["any"]
                   }
@@ -1006,19 +1009,19 @@
                 "to": [
                   {
                     "set_variable": {
-                      "name": "left_option pressed",
+                      "name": "left_control pressed",
                       "value": 1
                     }
                   },
                   {
-                    "key_code": "left_option"
+                    "key_code": "left_control"
                   }
                 ],
                 "to_delayed_action": {
                   "to_if_canceled": [
                     {
                       "set_variable": {
-                        "name": "left_option pressed",
+                        "name": "left_control pressed",
                         "value": 0
                       }
                     }
@@ -1026,7 +1029,7 @@
                   "to_if_invoked": [
                     {
                       "set_variable": {
-                        "name": "left_option pressed",
+                        "name": "left_control pressed",
                         "value": 0
                       }
                     }
@@ -1048,7 +1051,8 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -1077,7 +1081,8 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -1106,7 +1111,8 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -1135,7 +1141,8 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -1164,7 +1171,8 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -1193,7 +1201,8 @@
                       "^com.google.Chrome",
                       "^com.apple.Preview",
                       "^com.apple.finder",
-                      "^company.thebrowser.Browser"
+                      "^company.thebrowser.Browser",
+                      "^com.eastgate.Tinderbox.*"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -6635,4 +6644,3 @@
     }
   ]
 }
-
