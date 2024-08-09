@@ -7,7 +7,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "gruvbox",
-      colorscheme = "ayu-dark",
+      colorscheme = "retrobox",
     },
   },
 }
