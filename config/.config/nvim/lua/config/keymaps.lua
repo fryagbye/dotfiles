@@ -73,3 +73,8 @@ vim.keymap.set("n", "<F5>", require("dap").continue)
 vim.keymap.set("n", "<F10>", require("dap").step_over)
 vim.keymap.set("n", "<F11>", require("dap").step_into)
 vim.keymap.set("n", "S-<F11>", require("dap").step_out)
+
+-- smart_open
+vim.keymap.set("n", "<leader><leader>", function()
+  require("telescope").extensions.smart_open.smart_open()
+end, { noremap = true, silent = true })
