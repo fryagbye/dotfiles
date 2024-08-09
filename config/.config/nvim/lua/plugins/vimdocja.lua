@@ -1,3 +1,3 @@
 return {
-  { "vim-jp/vimdoc-ja" },
+  { "vim-jp/vimdoc-ja", event = "VeryLazy" },
 }

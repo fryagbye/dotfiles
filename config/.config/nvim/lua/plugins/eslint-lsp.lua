@@ -1,5 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
+  event = "VeryLazy",
   opts = {
     servers = { eslint = {} },
     setup = {
