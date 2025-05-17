@@ -1,4 +1,4 @@
-#files: 1380	version: 5.9
+#files: 1866	version: 5.9
 
 _comps=(
 ''\''brew' '_brew_services'
@@ -164,6 +164,7 @@ _comps=(
 'asciidoctor' '_asciidoctor'
 'asciinema' '_asciinema'
 'ash' '_sh'
+'ast-grep' '_ast-grep'
 'at' '_at'
 'atach' '_atach'
 'atq' '_at'
@@ -334,8 +335,8 @@ _comps=(
 'cplay' '_cplay'
 'cppcheck' '_cppcheck'
 'cpupower' '_cpupower'
-'createdb' '_postgresql'
-'createuser' '_postgresql'
+'createdb' '_pgsql_utils'
+'createuser' '_pgsql_utils'
 'crontab' '_crontab'
 'crsh' '_cssh'
 'cryptsetup' '_cryptsetup'
@@ -445,8 +446,8 @@ _comps=(
 'dput' '_dput'
 'drill' '_drill'
 'dropbox' '_dropbox'
-'dropdb' '_postgresql'
-'dropuser' '_postgresql'
+'dropdb' '_pgsql_utils'
+'dropuser' '_pgsql_utils'
 'drush' '_drush'
 'dscverify' '_dscverify'
 'dsh' '_dsh'
@@ -833,7 +834,7 @@ _comps=(
 'info' '_texinfo'
 'infocmp' '_terminals'
 'initctl' '_initctl'
-'initdb' '_postgresql'
+'initdb' '_pgsql_utils'
 'insmod' '_modutils'
 'install' '_install'
 'install-info' '_texinfo'
@@ -884,6 +885,7 @@ _comps=(
 'jot' '_jot'
 'jq' '_jq'
 'jrnl' '_jrnl'
+'jupyter' '_jupyter'
 'kak' '_kak'
 'kdeconnect-cli' '_kdeconnect'
 'kdump' '_kdump'
@@ -1217,10 +1219,10 @@ _comps=(
 'pflags' '_pids'
 'pg_config' '_postgresql'
 'pg_ctl' '_postgresql'
-'pg_dump' '_postgresql'
-'pg_dumpall' '_postgresql'
+'pg_dump' '_pgsql_utils'
+'pg_dumpall' '_pgsql_utils'
 'pg_isready' '_postgresql'
-'pg_restore' '_postgresql'
+'pg_restore' '_pgsql_utils'
 'pg_upgrade' '_postgresql'
 'pgrep' '_pgrep'
 'phing' '_phing'
@@ -1236,6 +1238,7 @@ _comps=(
 'ping' '_ping'
 'ping6' '_ping'
 'pipenv' '_pipenv'
+'pipx' '_pipx'
 'piuparts' '_piuparts'
 'pixz' '_pixz'
 'pkcon' '_pkcon'
@@ -1270,6 +1273,7 @@ _comps=(
 'podgrep' '_perl_modules'
 'podpath' '_perl_modules'
 'podtoc' '_perl_modules'
+'poetry' '_poetry'
 'poff' '_pon'
 'policytool' '_java'
 'pon' '_pon'
@@ -1315,7 +1319,7 @@ _comps=(
 'psmerge' '_psutils'
 'psmulti' '_postscript'
 'psnup' '_psutils'
-'psql' '_postgresql'
+'psql' '_pgsql_utils'
 'psresize' '_psutils'
 'psselect' '_psutils'
 'pstack' '_pids'
@@ -1348,6 +1352,7 @@ _comps=(
 'ralio' '_ralio'
 'ranlib' '_ranlib'
 'rar' '_rar'
+'rbenv' '_rbenv'
 'rc' '_sh'
 'rcctl' '_rcctl'
 'rclone' '_rclone'
@@ -1722,7 +1727,7 @@ _comps=(
 'useradd' '_user_admin'
 'userdel' '_users'
 'usermod' '_user_admin'
-'vacuumdb' '_postgresql'
+'vacuumdb' '_pgsql_utils'
 'val' '_sccs'
 'valgrind' '_valgrind'
 'vared' '_vared'
@@ -1836,11 +1841,13 @@ _comps=(
 'xxd' '_xxd'
 'xz' '_xz'
 'xzcat' '_xz'
+'ya' '_ya'
 'yafc' '_yafc'
 'yarn' '_yarn'
 'yash' '_sh'
 'yast' '_yast'
 'yast2' '_yast'
+'yazi' '_yazi'
 'ypbind' '_yp'
 'ypcat' '_yp'
 'ypmatch' '_yp'
@@ -2058,18 +2065,20 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _svm _teamocil _thor _tmuxinator _tmuxp \
             _tox _ts-node _tsc _udisksctl _ufw \
             _virtualbox _vnstat _wemux _wg-quick _xsel \
-            _yarn _zcash-cli _atuin _bat _br \
+            _yarn _zcash-cli _ast-grep _atuin _bat \
+            _br _brew _brew_services _broot _delta \
+            _eza _fd _gh _ghq _git \
+            _hyperfine _img2sixel _jupyter _kondo _mise \
+            _mutagen _mutagen-compose _ninja _pipenv _pipx \
+            _rbenv _rg _rnr _starship _tldr \
+            _volta _wezterm _xh _ya _yazi \
+            _zoxide _ast-grep _atuin _bat _br \
             _brew _brew_services _broot _delta _eza \
             _fd _gh _ghq _git _hyperfine \
-            _img2sixel _kondo _luarocks _mise _mutagen \
-            _mutagen-compose _ninja _pipenv _rg _rnr \
-            _starship _tldr _volta _wezterm _xh \
-            _zoxide _atuin _bat _br _brew \
-            _brew_services _broot _delta _eza _fd \
-            _gh _ghq _git _hyperfine _img2sixel \
-            _kondo _luarocks _mise _mutagen _mutagen-compose \
-            _ninja _pipenv _rg _rnr _starship \
-            _tldr _volta _wezterm _xh _zoxide \
+            _img2sixel _jupyter _kondo _mise _mutagen \
+            _mutagen-compose _ninja _pipenv _pipx _rbenv \
+            _rg _rnr _starship _tldr _volta \
+            _wezterm _xh _ya _yazi _zoxide \
             _afew _android _archlinux-java _artisan _atach \
             _avdmanager _bitcoin-cli _bower _bundle _cap \
             _cask _ccache _cf _choc _chromium \
@@ -2099,13 +2108,100 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _svm _teamocil _thor _tmuxinator _tmuxp \
             _tox _ts-node _tsc _udisksctl _ufw \
             _virtualbox _vnstat _wemux _wg-quick _xsel \
-            _yarn _zcash-cli _zinit _brew _brew_cask \
-            _brew_services _atuin _bat _br _brew \
-            _brew_services _broot _delta _eza _fd \
-            _gh _ghq _git _hyperfine _img2sixel \
-            _kondo _luarocks _mise _mutagen _mutagen-compose \
-            _ninja _pipenv _rg _rnr _starship \
-            _tldr _volta _wezterm _xh _zoxide \
+            _yarn _zcash-cli _ast-grep _atuin _bat \
+            _br _brew _brew_services _broot _delta \
+            _eza _fd _gh _ghq _git \
+            _hyperfine _img2sixel _jupyter _kondo _mise \
+            _mutagen _mutagen-compose _ninja _pipenv _pipx \
+            _rbenv _rg _rnr _starship _tldr \
+            _volta _wezterm _xh _ya _yazi \
+            _zoxide _afew _android _archlinux-java _artisan \
+            _atach _avdmanager _bitcoin-cli _bower _bundle \
+            _cap _cask _ccache _cf _choc \
+            _chromium _clang-check _clang-format _clang-tidy _cmake \
+            _coffee _conan _concourse _console _cppcheck \
+            _dad _dart _dget _dhcpcd _diana \
+            _direnv _docpad _drush _ecdsautil _emacs \
+            _emacsclient _emulator _envdir _exportfs _fab \
+            _fail2ban-client _ffind _fleetctl _flutter _fvm \
+            _fwupdmgr _gas _ghc _gist _git-flow \
+            _git-pulls _git-revise _git-wtf _glances _golang \
+            _google _gpgconf _grpcurl _gtk-launch _hello \
+            _hledger _homestead _httpie _ibus _include-what-you-use \
+            _inxi _jmeter _jmeter-plugins _jonas _jrnl \
+            _kak _kitchen _knife _language_codes _lilypond \
+            _lunchy _mc _middleman _mina _mix \
+            _mkcert _mssh _mussh _mvn _nano \
+            _nanoc _neofetch _networkQuality _nftables _node \
+            _nvm _openssl _openvpn3 _optirun _patool \
+            _periscope _pgsql_utils _phing _pixz _pkcon \
+            _play _pm2 _port _protoc _pygmentize \
+            _qmk _rails _ralio _redis-cli _rfkill \
+            _rkt _rmlint _rslsync _rspec _rsvm \
+            _rubocop _sbt _scala _screencapture _scrub \
+            _sdd _sdkmanager _setcap _setup.py _sfdx \
+            _shellcheck _showoff _srm _stack _subliminal \
+            _supervisorctl _svm _teamocil _thor _tmuxinator \
+            _tmuxp _tox _ts-node _tsc _udisksctl \
+            _ufw _virtualbox _vnstat _wemux _wg-quick \
+            _xsel _yarn _zcash-cli _ast-grep _atuin \
+            _bat _br _brew _brew_services _broot \
+            _delta _eza _fd _gh _ghq \
+            _git _hyperfine _img2sixel _jupyter _kondo \
+            _mise _mutagen _mutagen-compose _ninja _pipenv \
+            _pipx _rbenv _rg _rnr _starship \
+            _tldr _volta _wezterm _xh _ya \
+            _yazi _zoxide _ast-grep _atuin _bat \
+            _br _brew _brew_services _broot _delta \
+            _eza _fd _gh _ghq _git \
+            _hyperfine _img2sixel _jupyter _kondo _mise \
+            _mutagen _mutagen-compose _ninja _pipenv _pipx \
+            _rbenv _rg _rnr _starship _tldr \
+            _volta _wezterm _xh _ya _yazi \
+            _zoxide _afew _android _archlinux-java _artisan \
+            _atach _avdmanager _bitcoin-cli _bower _bundle \
+            _cap _cask _ccache _cf _choc \
+            _chromium _clang-check _clang-format _clang-tidy _cmake \
+            _coffee _conan _concourse _console _cppcheck \
+            _dad _dart _dget _dhcpcd _diana \
+            _direnv _docpad _drush _ecdsautil _emacs \
+            _emacsclient _emulator _envdir _exportfs _fab \
+            _fail2ban-client _ffind _fleetctl _flutter _fvm \
+            _fwupdmgr _gas _ghc _gist _git-flow \
+            _git-pulls _git-revise _git-wtf _glances _golang \
+            _google _gpgconf _grpcurl _gtk-launch _hello \
+            _hledger _homestead _httpie _ibus _include-what-you-use \
+            _inxi _jmeter _jmeter-plugins _jonas _jrnl \
+            _kak _kitchen _knife _language_codes _lilypond \
+            _lunchy _mc _middleman _mina _mix \
+            _mkcert _mssh _mussh _mvn _nano \
+            _nanoc _neofetch _networkQuality _nftables _node \
+            _nvm _openssl _openvpn3 _optirun _patool \
+            _periscope _pgsql_utils _phing _pixz _pkcon \
+            _play _pm2 _port _protoc _pygmentize \
+            _qmk _rails _ralio _redis-cli _rfkill \
+            _rkt _rmlint _rslsync _rspec _rsvm \
+            _rubocop _sbt _scala _screencapture _scrub \
+            _sdd _sdkmanager _setcap _setup.py _sfdx \
+            _shellcheck _showoff _srm _stack _subliminal \
+            _supervisorctl _svm _teamocil _thor _tmuxinator \
+            _tmuxp _tox _ts-node _tsc _udisksctl \
+            _ufw _virtualbox _vnstat _wemux _wg-quick \
+            _xsel _yarn _zcash-cli _zinit _ast-grep \
+            _atuin _bat _br _brew _brew_services \
+            _broot _delta _eza _fd _gh \
+            _ghq _git _hyperfine _img2sixel _jupyter \
+            _kondo _mise _mutagen _mutagen-compose _ninja \
+            _pipenv _pipx _rbenv _rg _rnr \
+            _starship _tldr _volta _wezterm _xh \
+            _ya _yazi _zoxide _brew _brew_cask \
+            _brew_services _ast-grep _atuin _bat _br \
+            _brew _brew_services _broot _delta _eza \
+            _fd _gh _ghq _git _hyperfine \
+            _img2sixel _jupyter _kondo _mise _mutagen \
+            _mutagen-compose _ninja _pipenv _pipx _rbenv \
+            _rg _rnr _starship _tldr _volta \
+            _wezterm _xh _ya _yazi _zoxide \
             _SUSEconfig __arguments _a2ps _a2utils _aap \
             _abcde _absolute_command_paths _ack _acpi _acpitool \
             _acroread _adb _add-zle-hook-widget _add-zsh-hook _alias \
@@ -2299,12 +2395,20 @@ autoload -Uz _afew _android _archlinux-java _artisan _atach \
             _zip _zle _zlogin _zmodload _zmv \
             _zoneadm _zones _zparseopts _zpty _zsh \
             _zsh-mime-handler _zsocket _zstyle _ztodo _zypper \
-            _atuin _bat _br _brew _brew_services \
-            _broot _delta _eza _fd _gh \
-            _ghq _git _hyperfine _img2sixel _kondo \
-            _luarocks _mise _mutagen _mutagen-compose _ninja \
-            _pipenv _rg _rnr _starship _tldr \
-            _volta _wezterm _xh _zoxide
+            _poetry _ast-grep _atuin _bat _br \
+            _brew _brew_services _broot _delta _eza \
+            _fd _gh _ghq _git _hyperfine \
+            _img2sixel _jupyter _kondo _mise _mutagen \
+            _mutagen-compose _ninja _pipenv _pipx _rbenv \
+            _rg _rnr _starship _tldr _volta \
+            _wezterm _xh _ya _yazi _zoxide \
+            _poetry _ast-grep _atuin _bat _br \
+            _brew _brew_services _broot _delta _eza \
+            _fd _gh _ghq _git _hyperfine \
+            _img2sixel _jupyter _kondo _mise _mutagen \
+            _mutagen-compose _ninja _pipenv _pipx _rbenv \
+            _rg _rnr _starship _tldr _volta \
+            _wezterm _xh _ya _yazi _zoxide
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

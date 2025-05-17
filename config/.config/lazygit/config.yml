@@ -3,6 +3,7 @@ git:
 
 gui:
   showIcons: true
+  language: "ja"
 
 os:
   editPreset: "nvim"

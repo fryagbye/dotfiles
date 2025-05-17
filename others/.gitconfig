@@ -11,7 +11,7 @@
 [core]
 	editor = vi
 [init]
-	defaultBranch = master
+	defaultBranch = main
 
 [core]
     pager = delta

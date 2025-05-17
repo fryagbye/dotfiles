@@ -20,3 +20,5 @@ vim.api.nvim_create_autocmd("TermOpen", {
     end
   end,
 })
+
+require("config.stylelint")

@@ -268,6 +268,7 @@ export LOGIN_NAME='fryagbye@gmail.com'
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 # export DXVK_CONFIG_FILE=$HOME/.wine/dxvk.conf
 export PATH="$HOME/.deno/bin:$PATH"
+export PATH="$HOME/.script:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
@@ -293,11 +294,11 @@ source $HOME/.config/broot/launcher/bash/br
 export PATH="$HOME/.nvm/versions/node/v22.3.0/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# export PNPM_HOME="$HOME/Library/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # pnpm end
 
 # fzf
@@ -415,3 +416,6 @@ export REACT_EDITOR=nvim
 #lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/tk4o2ka/.cache/lm-studio/bin"

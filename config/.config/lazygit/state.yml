@@ -1,15 +1,27 @@
 lastupdatecheck: 0
 recentrepos:
-    - /Users/tk4o2ka/github/blog
     - /Users/tk4o2ka/dotfiles
+    - /Users/tk4o2ka/github/tinderboxwithquarto
+    - /Users/tk4o2ka/.local/share/nvim/lazy/vscode-js-debug
+    - /Users/tk4o2ka/github/bgotbx
+    - /Users/tk4o2ka/marked2script
+    - /Users/tk4o2ka/github/fryagbye.github.io
+    - /Users/tk4o2ka/github/yfinance-commandline
+    - /Users/tk4o2ka/github/redis_jsonserver
+    - /Users/tk4o2ka/github/QuartoWithTinderbox
+    - /Users/tk4o2ka/github/blog
+    - /Users/tk4o2ka/github/shikiho
+    - /Users/tk4o2ka/github/EDINET_DB
 startuppopupversion: 5
-lastversion: 0.43.1
+lastversion: 0.48.0
 customcommandshistory:
+    - git push --tags
     - q
+    - Q
     - qa
 hidecommandlog: true
 ignorewhitespaceindiffview: false
-diffcontextsize: 3
+diffcontextsize: 1
 renamesimilaritythreshold: 50
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical

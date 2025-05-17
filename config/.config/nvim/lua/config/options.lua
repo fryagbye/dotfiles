@@ -36,3 +36,5 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 vim.g.node_host_prog = "/opt/homebrew/bin/neovim-node-host"
+
+-- vim.lsp.set_log_level("debug")

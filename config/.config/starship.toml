@@ -1,7 +1,7 @@
 # https://zenn.dev/oosuke3/scraps/38a42f48c6dba4
 
 scan_timeout = 100
-command_timeout = 500
+command_timeout = 3000
 
 right_format = """$time"""
 
@@ -32,6 +32,9 @@ symbol = " "
 style = "fg:blue"
 format = '([\[$all_status$ahead_behind\]]($style))'
 
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
 
 [nodejs]
 style = "#ffc0cb"
@@ -48,7 +51,8 @@ format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 [username]
 style_user = "white bold"
 style_root = "black bold"
-format = "[$user🌱]($style) "
+# format = "[$user🌱]($style) "
+format = "🌱($style) "
 disabled = false
 show_always = true
 

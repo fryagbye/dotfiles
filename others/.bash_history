@@ -28,3 +28,11 @@ poetry shell
 echo $SHELL
 source .zshrc
 exit
+exit
+exit
+exit
+exit
+exit
+ls
+exit
+exit
